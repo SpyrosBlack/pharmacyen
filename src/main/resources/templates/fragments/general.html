@@ -28,7 +28,7 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Διαχείριση
+            Administration
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
@@ -37,13 +37,13 @@
             <a aria-controls="collapseTwo" aria-expanded="true" class="nav-link collapsed" data-target="#collapseTwo"
                data-toggle="collapse" href="#">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>Παραγγελίες</span>
+                <span>Orders</span>
             </a>
             <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionSidebar" id="collapseTwo">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Custom Components:</h6>
-                    <a class="collapse-item" href="insertorder">Εισαγωγή Παραγγελίας</a>
-                    <a class="collapse-item" href="orders">Οι Παραγγελίες μου</a>
+                    <a class="collapse-item" href="insertorder">Insert Order</a>
+                    <a class="collapse-item" href="orders">My Orders</a>
                 </div>
             </div>
         </li>
@@ -58,15 +58,15 @@
             <div aria-labelledby="headingUtilities" class="collapse" data-parent="#accordionSidebar"
                  id="collapseUtilities">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Φαρμακεία:</h6>
-                    <a class="collapse-item" href="insertpharm">Εισαγωγή Φαρμακείου</a>
-                    <a class="collapse-item" href="allpharm">Φαρμακεια</a>
+                    <h6 class="collapse-header">PHARMACIES:</h6>
+                    <a class="collapse-item" href="insertpharm">Insert Pharmacy</a>
+                    <a class="collapse-item" href="allpharm">All Pharmacies</a>
 
                 </div>
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Φάρμακα:</h6>
-                    <a class="collapse-item" href="insertmed">Εισαγωγή Φαρμάκου</a>
-                    <a class="collapse-item" href="allmed">Φάρμακα</a>
+                    <h6 class="collapse-header">Medicine:</h6>
+                    <a class="collapse-item" href="insertmed">Insert Medicine</a>
+                    <a class="collapse-item" href="allmed">All Medicines</a>
 
                 </div>
             </div>
@@ -85,7 +85,7 @@
             <a aria-controls="collapsePages" aria-expanded="true" class="nav-link collapsed" data-target="#collapsePages"
                data-toggle="collapse" href="#">
                 <i class="fas fa-fw fa-folder"></i>
-                <span>Απόθεμα Αποθήκης</span>
+                <span>My stock</span>
             </a>
             <div aria-labelledby="headingPages" class="collapse" data-parent="#accordionSidebar" id="collapsePages">
                 <div class="bg-white py-2 collapse-inner rounded">
@@ -104,13 +104,13 @@
         <li class="nav-item" th:if="${session.loggedinuser.role=='Admin'}">
             <a class="nav-link" href="/orders">
                 <i class="fas fa-fw fa-table"></i>
-                <span>Παραγγελίες Φαρμακείων</span></a>
+                <span>Pharmacies Order</span></a>
         </li>
 
         <li class="nav-item" th:if="${session.loggedinuser.role=='Admin'}">
             <a class="nav-link" href="/warehouseinventory">
                 <i class="fas fa-fw fa-store"></i>
-                <span>Αποθήκη</span></a>
+                <span>Warehouse Stock</span></a>
         </li>
 
         <!-- Sidebar Toggler (Sidebar) -->

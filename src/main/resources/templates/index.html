@@ -59,7 +59,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            ΠΑΡΑΓΓΕΛΙΕΣ (Σύνολο)
+                                            ORDERS (Total)
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"
                                              th:text="${dashboard.totalorders}"/>
@@ -79,7 +79,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                            ΚΟΣΤΟΣ ΠΑΡΑΓΓΕΛΙΩΝ
+                                            TOTAL ORDER COST
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"
                                              th:text="${dashboard.totalcostoforders}"></div>
@@ -99,7 +99,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            ΑΤΟΜΑ ONLINE
+                                            PEOPLE ONLINE
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800"
                                              th:text="${@appScopeBean.numberofusers}">

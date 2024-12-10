@@ -11,6 +11,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
 public class MainController {
@@ -34,7 +35,8 @@ public class MainController {
     @PostMapping("/dologin")
     public String doLogin(@ModelAttribute("loginDTO") LoginDto dto,
                           ModelMap mm,
-                          HttpSession session) {
+                          HttpSession session,
+                          RedirectAttributes redirectAttributes) {
 
         AppUserDto loggedinuser = appUserService.dologin(dto.username, dto.userpass);
         if (loggedinuser == null) {
@@ -44,6 +46,7 @@ public class MainController {
             //System.out.println("------------------"+applicationScopeBean.getNumberofusers());
             applicationScopeBean.setNumberofusers(applicationScopeBean.getNumberofusers() + 1);
             session.setAttribute("loggedinuser", loggedinuser);
+            redirectAttributes.addFlashAttribute("infomessage","Login was ok");
             return "redirect:/showdashboard";
         }
     }
